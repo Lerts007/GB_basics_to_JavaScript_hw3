@@ -41,3 +41,27 @@ console.log(maxNum(num1, num2, num3));
 // (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции
 // не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны.
 // Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
+
+const num4 = +prompt("Введите первое число:");
+const num5 = +prompt("Введите второе число:");
+
+const sum = (num1, num2) => num1 + num2;
+const subtraction = (num1, num2) => {
+  if (num1 >= num2) {
+    return num1 - num2;
+  } else {
+    return num2 - num1;
+  }
+};
+const multiply = (num1, num2) => num1 * num2;
+const division = (num1, num2) => {
+  if (num2 === 0) {
+    return "Делить на ноль нельзя";
+  }
+  return num1 / num2;
+};
+
+console.log(`Функция сложения: ${sum(num4, num5)}`);
+console.log(`Функция разность: ${subtraction(num4, num5)}`);
+console.log(`Функция умножение: ${multiply(num4, num5)}`);
+console.log(`Функция деление: ${division(num4, num5)}`);
